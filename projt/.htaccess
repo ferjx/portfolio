@@ -1,0 +1,99 @@
+AddDefaultCharset Utf-8
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.calls-online.ru$ [NC]
+RewriteRule ^(.*)$ https://calls-online.ru/$1 [R=301,L]
+
+
+# index.php: 
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/ 
+RewriteRule ^index\.html$ https://calls-online.ru[R=301,L]
+
+
+<IfModule mod_setenvif.c>
+    <IfModule mod_headers.c>
+        BrowserMatch MSIE ie
+        Header set X-UA-Compatible "IE=Edge,chrome=1" env=ie
+    </IfModule>
+</IfModule>
+
+# комментарий по умолчанию allow access from all domains for webfonts
+<FilesMatch "\.(ttf|otf|eot|woff|font.css)$">
+    <IfModule mod_headers.c>
+        Header set Access-Control-Allow-Origin "*"
+    </IfModule>
+</FilesMatch>
+
+# комментарий по умолчанию video
+AddType video/ogg  ogg ogv
+AddType video/mp4  mp4
+AddType video/webm webm
+
+# комментарий по умолчанию Proper svg serving. Required for svg webfonts on iPad
+AddType image/svg+xml                 svg svgz
+
+# комментарий по умолчанию webfonts
+AddType application/vnd.ms-fontobject eot
+AddType font/ttf                      ttf
+AddType font/otf                      otf
+AddType font/x-woff                   woff
+
+AddType text/cache-manifest           manifest
+AddType text/x-component              htc
+
+# комментарий по умолчанию сжатие text, html, javascript, css, xml:
+<ifModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/css text/javascript application/javascript application/x-javascript
+</ifModule>
+
+# комментарий по умолчанию кешируем все данные
+<FilesMatch ".(flv|gif|jpg|jpeg|png|ico|swf|js|css|pdf)$">
+  Header set Cache-Control "max-age=2592000"
+</FilesMatch>
+
+<IfModule mod_expires.c>
+    ExpiresActive on
+    Header set cache-control: public
+    <FilesMatch "\.(js|css|xml|gz)$">
+        Header append Vary Accept-Encoding
+    </FilesMatch>
+
+    # комментарий по умолчанию Perhaps better to whitelist expires rules? Perhaps.
+    ExpiresDefault                          "access plus 1 month"
+
+    # комментарий по умолчанию cache.manifest needs re-reqeusts in FF 3.6 (thx Remy ~Introducing HTML5)
+    ExpiresByType text/cache-manifest       "access plus 0 seconds"
+
+    # комментарий по умолчанию your document html 
+    # комментарий по умолчанию 
+	ExpiresByType text/html                "access plus 1 hour"
+
+    # комментарий по умолчанию rss feed
+    ExpiresByType application/rss+xml       "access plus 1 hour"
+
+    # комментарий по умолчанию favicon (cannot be renamed)
+    ExpiresByType image/vnd.microsoft.icon  "access plus 1 week" 
+    ExpiresByType image/x-icon  			  "access plus 1 week" 
+
+    # комментарий по умолчанию media: images, video, audio
+    ExpiresByType image/png                 "access plus 1 month"
+    ExpiresByType image/jpg                 "access plus 1 month"
+    ExpiresByType image/jpeg                "access plus 1 month"
+    ExpiresByType image/gif                 "access plus 1 month"
+    ExpiresByType video/ogg                 "access plus 1 month"
+    ExpiresByType audio/ogg                 "access plus 1 month"
+    ExpiresByType video/mp4                 "access plus 1 month"
+    ExpiresByType image/x-icon              "access plus 1 month"
+
+    # комментарий по умолчанию webfonts
+    ExpiresByType font/ttf                  "access plus 1 month"
+    ExpiresByType font/woff                 "access plus 1 month"
+    ExpiresByType image/svg+xml             "access plus 1 month"
+
+    # комментарий по умолчанию css and javascript
+    ExpiresByType text/css                  "access plus 1 month"
+    ExpiresByType text/javascript           "access plus 1 month"
+    ExpiresByType application/javascript    "access plus 1 month"
+    ExpiresByType application/x-javascript  "access plus 1 month"
+</IfModule>
+
+ErrorDocument 404 /404.html
