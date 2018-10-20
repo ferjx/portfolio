@@ -2511,7 +2511,8 @@ p.primer__text {
   font-family: "RobotoRegular";
   font-size: 16px;
   font-weight: 400;
-  line-height: 24px; }
+  line-height: 24px;
+  text-align: left; }
   .main-block__content blockquote:before {
     display: none; }
 
