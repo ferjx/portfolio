@@ -20,15 +20,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="libs/animate/animate.css">
-	
-	<link rel="stylesheet" href="css/fonts.css">
-	<link rel="stylesheet" href="css/slick-theme.css">
-	<link rel="stylesheet" href="css/slick.css">
-	<link rel="stylesheet" href="css/jquery.fancybox.css">
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/media.css">
+	<link rel="stylesheet" href="css/plugins.css">
+	<link rel="stylesheet" href="css/style.css">
 
 	<script src="libs/modernizr/modernizr.js"></script>
 
@@ -363,175 +356,32 @@
 
 
 
-
-
-<!--
-	<div class="hidden"></div>
-
 	<div class="loader">
 		<div class="loader_inner"></div>
 	</div>
--->
-	<!--[if lt IE 9]>
-	<script src="libs/html5shiv/es5-shim.min.js"></script>
-	<script src="libs/html5shiv/html5shiv.min.js"></script>
-	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
-	<script src="libs/respond/respond.min.js"></script>
-<![endif]-->
-
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
 
 
-<script src="libs/jquery/jquery-1.11.2.min.js"></script>
-<script src="libs/jquery-ui/jquery-ui.min.js"></script>
-<script src="js/jquery.fancybox.js"></script>
-<script src="libs/waypoints/waypoints.min.js"></script>
-<script src="libs/bootstrap/js/bootstrap.min.js"></script>
+	<script src="libs/jquery/jquery-1.11.2.min.js"></script>
+	<script src="libs/jquery-ui/jquery-ui.min.js"></script>
+	<script src="js/jquery.fancybox.js"></script>
+	<script src="libs/waypoints/waypoints.min.js"></script>
+	<script src="libs/bootstrap/js/bootstrap.min.js"></script>
+
+	<script src="js/jquery.scrolly.min.js"></script>
+	<script src="js/jquery.scrollzer.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="feedback/script.js"></script>
+	<script src="js/script.js"></script>
 
 
-<script src="js/common.js"></script>
-<script src="js/jquery.scrolly.min.js"></script>
-<script src="js/jquery.scrollzer.min.js"></script>
-<script src="js/slick.min.js"></script>
-<script src="js/feedback/script.js"></script>
-<script src="js/script.js"></script>
-
-<script type="text/javascript">
-	jQuery(document).ready(function() {
-		jQuery(".main_gall li a").fancybox();
-	});
+ 	<!-- Yandex.Metrika counter --> 
+ 	<noscript>
+ 		<div>
+ 			<img src="https://mc.yandex.ru/watch/31750431" style="position:absolute; left:-9999px;" alt="" />
+ 		</div>
+ 	</noscript> 
+ 	<!-- /Yandex.Metrika counter -->
 
 
-	$(".fancybox").fancybox({
-		helpers: {
-			overlay: {
-				locked: false
-			}
-		}
-	});
-</script>
-
-<script>
-	$(document).ready(function(){
-		$(".f_mnu").on("click","a", function (event) {
-				//отменяем стандартную обработку нажатия по ссылке
-				event.preventDefault();
-
-				//забираем идентификатор бока с атрибута href
-				var id  = $(this).attr('href'),
-
-				//узнаем высоту от начала страницы до блока на который ссылается якорь
-				top = $(id).offset().top;
-				
-				//анимируем переход на расстояние - top за 1500 мс
-				$('body,html').animate({scrollTop: top-60}, 1500);
-			});
-	});
-</script>
-
-<script>
-	$(document).ready(function(){
-		$(".main_mnu").on("click","a", function (event) {
-				//отменяем стандартную обработку нажатия по ссылке
-				event.preventDefault();
-
-				//забираем идентификатор бока с атрибута href
-				var id  = $(this).attr('href'),
-
-				//узнаем высоту от начала страницы до блока на который ссылается якорь
-				top = $(id).offset().top;
-				
-				//анимируем переход на расстояние - top за 1500 мс
-				$('body,html').animate({scrollTop: top-60}, 1500);
-			});
-	});
-
-</script>
-
-<script type="text/javascript">
-
-	// Cache selectors
-	var lastId,
-	topMenu = $("#menu-center"),
-	topMenuHeight = topMenu.outerHeight()+150,
-	    // All list items
-	    menuItems = topMenu.find("a"),
-	    // Anchors corresponding to menu items
-	    scrollItems = menuItems.map(function(){
-	    	var item = $($(this).attr("href"));
-	    	if (item.length) { return item; }
-	    });
-
-	// Bind click handler to menu items
-	// so we can get a fancy scroll animation
-	menuItems.click(function(e){
-		var href = $(this).attr("href"),
-		offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
-		$('html, body').stop().animate({ 
-			scrollTop: offsetTop
-		}, 300);
-		e.preventDefault();
-	});
-
-	// Bind to scroll
-	$(window).scroll(function(){
-	   // Get container scroll position
-	   var fromTop = $(this).scrollTop()+topMenuHeight;
-	   
-	   // Get id of current scroll item
-	   var cur = scrollItems.map(function(){
-	   	if ($(this).offset().top < fromTop)
-	   		return this;
-	   });
-	   // Get the id of the current element
-	   cur = cur[cur.length-1];
-	   var id = cur && cur.length ? cur[0].id : "";
-	   
-	   if (lastId !== id) {
-	   	lastId = id;
-	       // Set/remove active class
-	       menuItems
-	       .parent().removeClass("active")
-	       .end().filter("[href='#"+id+"']").parent().addClass("active");
-	     }                   
-	   });
-	 </script>
-
-	 <!-- scroll-top -->
-<!-- 	 <script type="text/javascript">
-	 	$(window).scroll(function() {
-	 		if ($(this).scrollTop() > 1){
-	 			$('.page_head').addClass("sticky");
-	 		}
-	 		else{
-	 			$('.page_head').removeClass("sticky");
-	 		}
-	 	});
-	 </script> -->
-
-	 <script>
-	 	$(".navbar-toggle").click(function(){
-	 		$(".main_mnu ul").toggleClass("expand");
-	 	});
-	 </script>
-
-	 <!-- BEGIN JIVOSITE CODE {literal} -->
-	 <!-- 
-	 <script type='text/javascript'>
-	 	(function(){ var widget_id = 'q9oCSLS68Z';
-	 		var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);})();
-	 	</script> -->
-
-	 	<!-- {/literal} END JIVOSITE CODE -->
-
-	 	<!-- Yandex.Metrika counter --> 
-	 	
-	 	<noscript>
-	 		<div>
-	 			<img src="https://mc.yandex.ru/watch/31750431" style="position:absolute; left:-9999px;" alt="" />
-	 		</div>
-	 	</noscript> 
-	 	<!-- /Yandex.Metrika counter -->
-
-	 </body>
-	 </html>
+</body>
+</html>
