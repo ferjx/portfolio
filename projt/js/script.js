@@ -264,33 +264,28 @@ document.addEventListener( "DOMContentLoaded", function() {
 
 // main
 // <ol> <li> list-style number vertical
-$(function(){
-	// функция для мобильной версии
-	var setState = function() {
-		// условия для ширины и высоты окна
-		// if(length > yPos && width > xPos)
+// $(function(){
 
-		// условия события для окна
-		if( width > xPos) {
-			$( '#discharge-preview > div' ).css( {
-				width: "50%"
-			} );
-		} else {
-			$( '#discharge-preview > div' ).css( {
-				width: "100%"
-			} );
-		}
-	}
+// 	var setState = function() {
+// 		if( width > 900) {
+// 			$( '#discharge-preview > div' ).css( {
+// 				width: "50%"
+// 			} );
+// 		} else {
+// 			$( '#discharge-preview > div' ).css( {
+// 				width: "100%"
+// 			} );
+// 		}
+// 	}
+// 	var width = $(window).width();
+// 	setTimeout(function() {
+// 		$( window ).resize(function() {
+// 			width = $(window).width();
+// 			setState();
+// 		})
+// 	}, 100);
 
-	var xPos = 900;
-
-	var width = $(window).width();
-
-	$( window ).resize(function() {
-		width = $(window).width();
-		setState();
-	})
-});
+// });
 
 
 
@@ -309,6 +304,41 @@ $(".fancybox").fancybox({
 		}
 	}
 });
+
+
+// prices popup blue
+jQuery(document).ready(function() {
+	jQuery(".btn-button a").fancybox();
+});
+
+$(document).ready(function() {
+	$("#orderPopup").fancybox({
+		maxWidth	: 646,
+		maxHeight	: 600,
+		fitToView	: false,
+		width		: '70%',
+		height		: 'auto',
+		autoSize	: false,
+		closeClick	: false,
+		openEffect	: 'none',
+		closeEffect	: 'none'
+	});
+});
+
+$(document).ready(function() {
+	$("#orderPopup2").fancybox({
+		maxWidth	: 646,
+		fitToView	: false,
+		width		: '70%',
+		height		: 'auto',
+		autoSize	: false,
+		closeClick	: false,
+		openEffect	: 'none',
+		closeEffect	: 'none'
+	});
+});
+// popupVoicesLiving-hidden
+// popupVoicesRobot-hidden
 
 
 

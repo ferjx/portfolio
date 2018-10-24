@@ -25,6 +25,63 @@
 
 </head>
 <body>
+	
+	<div id="popupVoicesLiving-hidden" class="popupVoicesRobot-hidden">
+		<div id="voicesRobot" class="voicesRobot">
+			<div class="voicesRobot__title">Живые голоса</div>
+			<p class="voicesRobot__text">Оставьте свой почтовый ящик и мы свяжемся для обсуждения заказа</p>
+			
+			<div class="foot_form foot_form_popup">
+				<form id="contactFormt" autocomplete="off">
+					<div class="form_input">
+						<!-- Email пользователя -->
+						<input type="email" id="emailt" name="emailt" class="form-control" required="required" value="" placeholder="Ваш e-mail" maxlength="30">               
+					</div>
+					<div class="foot_btn_block voicesRobot__btn">
+						<!-- Кнопка, отправляющая форму -->  
+						<button type="submit" class="foot_btn voicesRobot__btn-item">Отправить</button>
+					</div>
+				</form>
+			</div>
+
+		</div>
+	</div>
+
+	<div id="popupVoicesRobot-hidden" class="popupVoicesRobot-hidden">
+		<div id="voicesRobot" class="voicesRobot">
+			<div class="voicesRobot__title">Голоса от робота</div>
+			<p class="voicesRobot__text">Оставьте свой почтовый ящик и мы свяжемся для обсуждения заказа</p>
+			
+			<div class="foot_form foot_form_popup">
+				<form id="contactFormt" autocomplete="off">
+					<div class="form_input">
+						<!-- Email пользователя -->
+						<input type="email" id="emailt" name="emailt" class="form-control" required="required" value="" placeholder="Ваш e-mail" maxlength="30">               
+					</div>
+					<div class="foot_btn_block voicesRobot__btn">
+						<!-- Кнопка, отправляющая форму -->  
+						<button type="submit" class="foot_btn voicesRobot__btn-item">Отправить</button>
+					</div>
+				</form>
+			</div>
+
+		</div>
+	</div>
+
+	<div id="popupVoicesCompleted-hidden" class="popupVoicesRobot-hidden">
+		<div id="voicesRobot" class="voicesRobot">
+			<div class="voicesRobot__title">Спасибо за заявку</div>
+			<p class="voicesRobot__text">С вами скоро свяжутся!</p>
+		</div>
+	</div>
+
+	<div id="popupVoicesError-hidden" class="popupVoicesRobot-hidden">
+		<div id="voicesRobot" class="voicesRobot">
+			<div class="voicesRobot__title">Ошибка!</div>
+			<p class="voicesRobot__text">Отметьте галочку, что вы не робот!</p>
+		</div>
+	</div>
+
 
 	<section class="page_head">
 		<div class="top_head">
@@ -138,7 +195,7 @@
 								</div>
 								<h3 class="order-head__title">НАКРУТКА ЖИВЫХ ГОЛОСОВ</h3>
 								<div class="btn-button">
-									<a id="fancybox" class="btn-order__self btn-button_cr-red" href="#">Заказать</a>
+									<a id="orderPopup" class="btn-order__self btn-button_cr-red" href="#popupVoicesLiving-hidden">Заказать</a>
 								</div>
 							</div>
 							<ul class="pricesb-box">
@@ -210,7 +267,7 @@
 								</div>
 								<h3 class="order-head__title">НАКРУТКА ботами</h3>
 								<div class="btn-button">
-									<a class="btn-order__self btn-button_cr-red" href="#">Заказать</a>
+									<a id="orderPopup2" class="btn-order__self btn-button_cr-red" href="#popupVoicesRobot-hidden">Заказать</a>
 								</div>
 							</div>
 							<ul class="pricesb-box">
