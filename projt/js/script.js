@@ -46,7 +46,7 @@ $(function(){
 			const newHeaderId = ui.newHeader.attr('id');
 
 			if (newHeaderId) {
-				history.pushState(null, null, `#${newHeaderId}`);
+				// history.pushState(null, null, `#${newHeaderId}`);
 			}
 		},
 
