@@ -24,14 +24,15 @@ $(document).ready(function(){
 	});
 });
 
-
-
-$(window).load(function() {
-
+var loaderBr = function() {
+	if( window.pageLoaded ) return;
+	window.pageLoaded = true;
 	$(".loader_inner").fadeOut();
 	$(".loader").delay(400).fadeOut("slow");
+};
+$(window).load(loaderBr);
+setTimeout(loaderBr, 5000);
 
-});
 
 
 // accordion: faq
