@@ -2163,7 +2163,7 @@ $(function() {
   // при нажатии на кнопку Обновить
   $("#reload-captchat").click(function() {
 	// выводим новый код капча
-    $('#img-captchat').attr('src','/feedback/captcha.php?id='+Math.random()+'');
+    $('#img-captchat').attr('src','feedback/captcha.php?id='+Math.random()+'');
   });
 
   // при отправке формы contactFormt на сервер (id="contactFormt")

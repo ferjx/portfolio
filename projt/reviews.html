@@ -67,50 +67,51 @@
 	</section>
 
 	<section id="home" class="main">
-		<div class="h-form">
+
+		<!-- <div class="h-form">
 			<div class="container-big">
 				<div class="big_block_rimg">
 					<div class="main_form main_form_marl">
 						<span class="main_form__titl"><b>Быстрый расчет цены </b><br>за услуги накрутки</span>
-						<!-- Форма обратной связи -->
+						Форма обратной связи
 						<form id="contactForm" autocomplete="off">
-							<!-- Имя и email пользователя -->                
-
-							<!-- Имя пользователя -->
+							Имя и email пользователя                
+		
+							Имя пользователя
 							<div class="form_input">
 								<input placeholder="Ваше имя" type="text" id="name" name="name" class="form-control" required="required" value="" minlength="2" maxlength="30">
 							</div>
-
+		
 							<div class="form_input">
-								<!-- Email пользователя -->
+								Email пользователя
 								<input type="email" id="email" name="email" class="form-control" required="required"  value="" placeholder="Ваш e-mail" maxlength="30">               
 							</div>
-
-							<!-- Сообщение пользователя -->
+		
+							Сообщение пользователя
 							<div class="form_input">
-								<textarea id="message" class="form-control" rows="3" placeholder="Задать вопрос" minlength="20" maxlength="500" ></textarea>
+								<textarea id="message" class="form-control" rows="3" placeholder="Задать вопрос" minlength="20" maxlength="500" style="resize: none; overflow-y: hidden;"></textarea>
 							</div>
-
+		
 							<div class="capth_block">
-
+		
 								<div class="form-group">
 									<p class="hass_feed">Введите текст с картинки</p>
-
-									<!-- Блок для ввода кода капчи -->
+		
+									Блок для ввода кода капчи
 									<div class="has-feedback">
 										<input id="text-captcha" name="captcha" type="text" class="form-control" required="required" placeholder="Введите код" value="" autocomplete="off" minlength="6" maxlength="6">
 									</div>
-
-									<!-- Изображение, содержащее код капчи -->		  
+		
+									Изображение, содержащее код капчи		  
 									<img id="img-captcha" src="captcha.php">
-									<!-- Элемент, обновляющий код капчи -->
+									Элемент, обновляющий код капчи
 									<div id="reload-captcha" class="btn btn-default"> Обновить</div>
-
+		
 								</div>
 							</div>
-							<!-- Кнопка, отправляющая форму -->  
+							Кнопка, отправляющая форму  
 							<button type="submit" class="main_btn">Отправить заявку</button>
-						</form><!-- Конец формы -->
+						</form>Конец формы
 					</div>
 					<div class="nav-hed">
 						<div class="nav-hed__item nav-hed__item_black">накрутка</div>
@@ -119,10 +120,9 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
-
-		<div class="bs-reviews">
+		<div class="bs-reviews" style="border-top: none; margin-top: 40px;">
 			<div class="container">
 				<div class="hb-title">
 					<h2 class="hb-title__title">отзывы</h2>
@@ -134,19 +134,19 @@
 							<div class="ui-rating">
 								<div id="reviewStars-input-1" class="reviewStars-input">
 									<label title="bad" for="star-1"></label>
-									<input id="star-1" type="radio" name="reviewStarss1" checked="">
+									<input id="star-1" type="radio" name="reviewStarss1" checked disabled>
 
 									<label title="poor" for="star-2"></label>
-									<input id="star-2" type="radio" name="reviewStarss1" checked="">
+									<input id="star-2" type="radio" name="reviewStarss1" checked disabled>
 
 									<label title="regular" for="star-3"></label>
-									<input id="star-3" type="radio" name="reviewStarss1" checked="">
+									<input id="star-3" type="radio" name="reviewStarss1" checked disabled>
 
 									<label title="good" for="star-4"></label>
-									<input id="star-4" type="radio" name="reviewStarss1" checked="">
+									<input id="star-4" type="radio" name="reviewStarss1" checked disabled>
 
 									<label title="gorgeous" for="star-5"></label>
-									<input id="star-5" type="radio" name="reviewStarss1">
+									<input id="star-5" type="radio" name="reviewStarss1" disabled>
 								</div>
 							</div>
 							<div class="reviews-text">
@@ -166,19 +166,19 @@
 							<div class="ui-rating">
 								<div id="reviewStars-input-1" class="reviewStars-input">
 									<label title="bad" for="star-6"></label>
-									<input id="star-6" type="radio" name="reviewStarss2" checked="">
+									<input id="star-6" type="radio" name="reviewStarss2" checked disabled>
 
 									<label title="poor" for="star-7"></label>
-									<input id="star-7" type="radio" name="reviewStarss2" checked="">
+									<input id="star-7" type="radio" name="reviewStarss2" checked disabled>
 
 									<label title="regular" for="star-8"></label>
-									<input id="star-8" type="radio" name="reviewStarss2" checked="">
+									<input id="star-8" type="radio" name="reviewStarss2" checked disabled>
 
 									<label title="good" for="star-9"></label>
-									<input id="star-9" type="radio" name="reviewStarss2" checked="">
+									<input id="star-9" type="radio" name="reviewStarss2" checked disabled>
 
 									<label title="gorgeous" for="star-10"></label>
-									<input id="star-10" type="radio" name="reviewStarss2">
+									<input id="star-10" type="radio" name="reviewStarss2" disabled>
 								</div>
 							</div>
 							<div class="reviews-text">
@@ -198,19 +198,19 @@
 							<div class="ui-rating">
 								<div id="reviewStars-input-1" class="reviewStars-input">
 									<label title="bad" for="star-11"></label>
-									<input id="star-11" type="radio" name="reviewStarss3" checked="">
+									<input id="star-11" type="radio" name="reviewStarss3" checked disabled>
 
 									<label title="poor" for="star-12"></label>
-									<input id="star-12" type="radio" name="reviewStarss3" checked="">
+									<input id="star-12" type="radio" name="reviewStarss3" checked disabled>
 
 									<label title="regular" for="star-13"></label>
-									<input id="star-13" type="radio" name="reviewStarss3" checked="">
+									<input id="star-13" type="radio" name="reviewStarss3" checked disabled>
 
 									<label title="good" for="star-14"></label>
-									<input id="star-14" type="radio" name="reviewStarss3" checked="">
+									<input id="star-14" type="radio" name="reviewStarss3" checked disabled>
 
 									<label title="gorgeous" for="star-15"></label>
-									<input id="star-15" type="radio" name="reviewStarss3">
+									<input id="star-15" type="radio" name="reviewStarss3" disabled>
 								</div>
 							</div>
 							<div class="reviews-text">
@@ -230,19 +230,19 @@
 							<div class="ui-rating">
 								<div id="reviewStars-input-1" class="reviewStars-input">
 									<label title="bad" for="star-16"></label>
-									<input id="star-16" type="radio" name="reviewStarss4" checked="">
+									<input id="star-16" type="radio" name="reviewStarss4" checked disabled>
 
 									<label title="poor" for="star-17"></label>
-									<input id="star-17" type="radio" name="reviewStarss4" checked="">
+									<input id="star-17" type="radio" name="reviewStarss4" checked disabled>
 
 									<label title="regular" for="star-18"></label>
-									<input id="star-18" type="radio" name="reviewStarss4" checked="">
+									<input id="star-18" type="radio" name="reviewStarss4" checked disabled>
 
 									<label title="good" for="star-19"></label>
-									<input id="star-19" type="radio" name="reviewStarss4" checked="">
+									<input id="star-19" type="radio" name="reviewStarss4" checked disabled>
 
 									<label title="gorgeous" for="star-20"></label>
-									<input id="star-20" type="radio" name="reviewStarss4">
+									<input id="star-20" type="radio" name="reviewStarss4" disabled>
 								</div>
 							</div>
 							<div class="reviews-text">
@@ -262,19 +262,19 @@
 							<div class="ui-rating">
 								<div id="reviewStars-input-1" class="reviewStars-input">
 									<label title="bad" for="star-21"></label>
-									<input id="star-21" type="radio" name="reviewStarss5" checked="">
+									<input id="star-21" type="radio" name="reviewStarss5" checked disabled>
 
 									<label title="poor" for="star-22"></label>
-									<input id="star-22" type="radio" name="reviewStarss5" checked="">
+									<input id="star-22" type="radio" name="reviewStarss5" checked disabled>
 
 									<label title="regular" for="star-23"></label>
-									<input id="star-23" type="radio" name="reviewStarss5" checked="">
+									<input id="star-23" type="radio" name="reviewStarss5" checked disabled>
 
 									<label title="good" for="star-24"></label>
-									<input id="star-24" type="radio" name="reviewStarss5" checked="">
+									<input id="star-24" type="radio" name="reviewStarss5" checked disabled>
 
 									<label title="gorgeous" for="star-25"></label>
-									<input id="star-25" type="radio" name="reviewStarss5">
+									<input id="star-25" type="radio" name="reviewStarss5" disabled>
 								</div>
 							</div>
 							<div class="reviews-text">
@@ -294,19 +294,19 @@
 							<div class="ui-rating">
 								<div id="reviewStars-input-1" class="reviewStars-input">
 									<label title="bad" for="star-26"></label>
-									<input id="star-26" type="radio" name="reviewStarss6" checked="">
+									<input id="star-26" type="radio" name="reviewStarss6" checked disabled>
 
 									<label title="poor" for="star-27"></label>
-									<input id="star-27" type="radio" name="reviewStarss6" checked="">
+									<input id="star-27" type="radio" name="reviewStarss6" checked disabled>
 
 									<label title="regular" for="star-28"></label>
-									<input id="star-28" type="radio" name="reviewStarss6" checked="">
+									<input id="star-28" type="radio" name="reviewStarss6" checked disabled>
 
 									<label title="good" for="star-29"></label>
-									<input id="star-29" type="radio" name="reviewStarss6" checked="">
+									<input id="star-29" type="radio" name="reviewStarss6" checked disabled>
 
 									<label title="gorgeous" for="star-30"></label>
-									<input id="star-30" type="radio" name="reviewStarss6">
+									<input id="star-30" type="radio" name="reviewStarss6" disabled>
 								</div>
 							</div>
 							<div class="reviews-text">
@@ -321,6 +321,7 @@
 								</div>
 							</div>
 						</div> 
+						
 					</div>
 					<nav>
 						<ul class="block-pagination">
@@ -344,7 +345,7 @@
 			<div id="cont" class="container">
 				<div class="bs-contact_bor-shadow">
 					<div class="hb-title">
-						<h2 class="hb-title__title">Обратная связь</h2>
+						<h2 class="hb-title__title">Оставить отзыв</h2>
 					</div>
 					<div class="foot_form foot_form_topm">
 
@@ -358,7 +359,7 @@
 									<div class="ui-rating__title">
 										Оцените сервис 
 									</div>
-									<div id="reviewStars-input-1" class="reviewStars-input">
+									<div id="reviewStars-input-1" class="reviewStars-input_form">
 										<label title="bad" for="star-31"></label>
 										<input id="star-31" type="radio" name="reviewStarss7" checked="">
 
@@ -384,7 +385,7 @@
 
 							<!-- Сообщение пользователя -->
 							<div class="form_input">
-								<textarea id="messaget" class="form-control" rows="3" placeholder="Задать вопрос" minlength="20" maxlength="500" ></textarea>
+								<textarea id="messaget" class="form-control" rows="3" placeholder="Напишите текст отзыва" minlength="5" maxlength="500" style="resize: none; overflow-y: hidden;"></textarea>
 							</div>
 
 							<div class="foot_btn_block">
