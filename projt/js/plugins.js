@@ -216,14 +216,14 @@ this._delay(function(){n===this.counter&&this.refreshPositions(!s)})},_clear:fun
 			// Properties for each animation type
 			// Opening fancyBox
 			openEffect  : 'fade', // 'elastic', 'fade' or 'none'
-			openSpeed   : 250,
+			openSpeed   : 0,
 			openEasing  : 'swing',
 			openOpacity : true,
 			openMethod  : 'zoomIn',
 
 			// Closing fancyBox
 			closeEffect  : 'fade', // 'elastic', 'fade' or 'none'
-			closeSpeed   : 250,
+			closeSpeed   : 0,
 			closeEasing  : 'swing',
 			closeOpacity : true,
 			closeMethod  : 'zoomOut',
