@@ -639,7 +639,7 @@ this._delay(function(){n===this.counter&&this.refreshPositions(!s)})},_clear:fun
 
 				F.wrap.removeClass('fancybox-tmp');
 
-				if (anyway || type === 'load' || (type === 'resize' && current.autoResize)) {
+				if (/*anyway ||*/ type === 'load' || (type === 'resize' && current.autoResize)) {
 					F._setDimension();
 				}
 

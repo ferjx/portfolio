@@ -3951,7 +3951,7 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .fancybox-title-float-wrap .child {
-	       padding: 2px 20px;
+	  padding: 2px 20px;
     color: #383838;
     line-height: 19px;
     font-size: 13px;
@@ -3982,10 +3982,39 @@ Copyright (c) 2015 Daniel Eden
 	background: rgba(0, 0, 0, .8);
 }
 
+.fancybox-image {
+	border: 1px solid #ebebeb;
+	border-radius: 13px;
+}
+.fancybox-outer, 
+.fancybox-inner {
+	width: 100% !important;
+	height: 100% !important;
+	padding: 21px;
+	padding-bottom: 4px;
+}
+.fancybox-skin {
+	border-radius: 27px;
+	background: #ffffff;
+}
+.fancybox-close {
+	background-image: url("../img/closep.png");
+	background-repeat: no-repeat;
+	background-position: 12px 13px;
+	top: 5px;
+	right: 6px;
+}
+
+.fancybox-lock .fancybox-overlay {
+	background: rgba(255, 255, 255, 0.9);
+}
+.fancybox-overlay-fixed {
+	background: rgba(255, 255, 255, 0.9);
+}
+
 /*Retina graphics!*/
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
 	   only screen and (min--moz-device-pixel-ratio: 1.5),
 	   only screen and (min-device-pixel-ratio: 1.5){
 
-	
 }

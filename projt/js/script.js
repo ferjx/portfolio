@@ -293,24 +293,24 @@ document.addEventListener( "DOMContentLoaded", function() {
 
 
 // js html file
+// jQuery(document).ready(function() {
+// 	jQuery(".main_gall li a").fancybox();
+// });
+
 jQuery(document).ready(function() {
-	jQuery(".main_gall li a").fancybox();
-});
-
-
-$(".fancybox").fancybox({
-	helpers: {
-		overlay: {
-			locked: true
+	$(".fancybox").fancybox({
+		helpers: {
+			overlay: {
+				locked: true
+			}
 		}
-	}
+	});
 });
-
 
 // prices popup blue
-jQuery(document).ready(function() {
-	jQuery(".btn-button_order a").fancybox();
-});
+// jQuery(document).ready(function() {
+// 	jQuery(".btn-button_order a").fancybox();
+// });
 
 $(document).ready(function() {
 	$("#orderPopup").fancybox({
