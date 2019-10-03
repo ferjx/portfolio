@@ -1,0 +1,77 @@
+.images-list {
+	margin:0 5px 0 0;
+	max-width:500px;
+	display:block;
+	float:left;
+}
+
+.images-list .item {
+	width: 140px;
+    float: left;
+    text-align: center;
+    margin:0 5px 5px 0;
+}
+
+.images-list .item:last-child {
+    margin-right: 0;
+}
+
+.images-list .item .preview {
+    text-align: center;
+    position: relative;
+    width: 140px;
+    height: 100px;
+}
+
+.images-list .item .preview img {
+	margin: 0 auto;
+    width: 140px;
+    height: 100px;
+	display: block;
+	clear: both;
+}
+
+.images-list .item .preview .progress {
+    top: 45px;
+    left: 30px;
+    width: 78px;
+    height: 8px;
+    background: #fff;
+    position: relative;
+    border: 1px solid #999;
+}
+
+.images-list .item .preview .progress small {
+    display: block;
+    position: relative;
+    height: 100%;
+    background: #22ee55;
+}
+
+.images-list .item span.remove {
+    font-family: 'Open Sans', sans-serif;
+    display: inline-block;
+	float:left;
+    width: 140px;
+    margin: 5px 0;
+    color: #333;
+    font-size: 12px;
+    cursor: pointer;
+	text-align:center;
+}
+
+.images-list:hover .item span.remove:hover {
+    color: #c00;
+}
+
+.images-list .item .preview .img_upload_rotate {
+    display:inline-block;
+    position:absolute;
+    width: 15px;
+    height: 13px;
+    top:5px;
+    left:3px;
+    background-size: contain;
+    background-image: url("../images/rotate.gif");
+    background-repeat: no-repeat;
+}

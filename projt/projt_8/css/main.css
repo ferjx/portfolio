@@ -1,0 +1,470 @@
+@import "960_px.css";
+
+@font-face {
+	font-family: 'Arial'; 
+	src: url('../fonts/Arial.ttf');
+	}
+	
+	
+	
+	
+
+
+ABBR,ARTICLE,ASIDE,AUDIO,BB,CANVAS,DATAGRID,DATALIST,DETAILS,DIALOG,FIGURE,FOOTER,HEADER,MARK,MENU,METER,NAV,OUTPUT,PROGRESS,SECTION,TIME,VIDEO {
+	display:block;
+	}
+	
+	
+HTML,BODY,DIV,SPAN,APPLET,OBJECT,IFRAME,H1,H2,H3,H4,H5,H6,P,
+BLOCKQUOTE,PRE,A,ABBR,ACRONYM,ADDRESS,BIG,CITE,CODE,DEL,DFN,
+EM,FONT,IMG,INS,KBD,Q,S,SAMP,SMALL,STRIKE,STRONG,SUB,SUP,
+TT,VAR,HR,B,U,I,CENTER,DL,DT,DD,OL,UL,LI,FIELDSET,FORM,
+LABEL,LEGEND,TABLE,CAPTION,TBODY,TFOOT,THEAD,TR,TH,TD,INPUT {
+	padding:0;
+	margin:0;
+	border:none;
+	outline:none;
+	}	
+
+BODY { 
+	color: #6c6c6b;
+	font: 12px 'Arial','sans-serif';
+	}
+A { 
+	color: #ff5d4f;
+	-webkit-transition:color .2s linear;
+	-moz-transition:color .2s linear;
+	-o-transition:color .2s linear;
+	transition:color .2s linear;	
+	font-size:12px;
+	}
+:focus {
+	outline:none;
+	}
+	
+
+.clearfix { 
+	clear:both;
+	width:100%;
+	height:0;
+}
+.clearfix:after { 
+	content:".";
+	clear:both;
+	display:block;
+	height:0;
+	line-height:0;
+	overflow:hidden;
+	visibility:hidden;
+	}
+.clearfix { 
+	display:inline-block;
+	}
+html[xmlns] .clearfix {
+	display:block;
+	}
+*html .clearfix	{
+	height:1%;
+	}
+	
+H1, H2, H3, H4, H5, H6 {
+	color: #000;
+	margin: 0 0 15px;
+	}
+H1 { font-size: 26px; font-weight:lighter;}
+
+H2 { font-size: 24px; font-weight:lighter;}
+
+H3 { font-size: 22px; font-weight:lighter;}
+
+H4 { font-size: 20px; font-weight:lighter;}
+
+H5 { font-size: 18px; font-weight:lighter;}
+
+H6 { font-size: 16px; font-weight:lighter;}	
+
+P { 
+	margin: 0 0 20px;
+	line-height: 20px;
+	}	
+EM { 
+	display: block;
+	margin: 0 0 20px 30px;
+	color: #7a7a7a;
+	font-size: 12px;
+	line-height: 20px;
+	}	
+
+
+DL { margin: 0 0 15px 0; }
+
+	DT { margin: 0 0 5px; }	
+	
+	DD { margin: 0 0 5px 10px; }
+	
+
+ADDRESS { margin: 0 0 15px 0; }	
+
+BLOCKQUOTE { margin: 0 0 15px 0; }
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background:url("../i/bg/diagonal-cap.png") repeat-x top left;
+  }
+
+body {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  position: relative;
+}
+
+	
+	/* 	header
+		---------------------------------------- */	
+	#header {
+		width: 960px;
+		height: 90px;
+		margin:0 auto;
+		}
+		
+		/* 	logo
+			---------------------------------------- */	
+		#header .logo{
+			width: 225px;
+			height: 85px;
+			background:url("../i/bg/logo.png") no-repeat;
+			text-indent:-9999px;
+			}
+			
+		/* 	callCenter
+			---------------------------------------- */	
+		#header .callCenter{
+			width: 340px;
+			height: 45px;
+			color:#ff5d4f;
+			float:right;
+			}
+			#header .callCenter a{
+				color:#ff5d4f;
+				float:left;
+				height:19px;
+				background:url("../i/bg/application.png") no-repeat;
+				padding:4px 0 0 25px;
+				margin-top: 23px;
+				}
+			#header .callCenter a:hover{
+				color:#fe9f9f;
+				text-decoration:none;
+				}
+			
+			#header .callCenter .vcard{
+				width: 193px;
+				float:right;
+				}
+				#header .callCenter .vcard .tel{
+					font-size:24px;
+					float:right;
+					}
+					#header .callCenter .vcard .tel i{
+						font-size:14px;
+						background:url("../i/bg/phone.png") no-repeat;
+						padding:5px 0 0 15px;
+						font-style:normal;
+						}
+						
+				#header .callCenter .vcard small{
+					font-size:11px;
+					float:right;
+					}
+					
+		/* 	navigator
+			---------------------------------------- */	
+		#header .navigator{
+			float:right;
+			margin-top:20px;
+			text-align:right;
+			}
+			#header .navigator li.last{
+				margin-right:-5px;
+				}
+			#header .navigator li{
+				float:left;
+				list-style:none;
+				margin-right:15px;
+				}
+				#header .navigator li a{
+					font-size:14px;
+					padding:3px 5px;
+					}
+				#header .navigator li a:hover{
+					color:#fe9f9f;
+					text-decoration:none;
+					}
+				#header .navigator li a.link-active{
+					color:#ff5d4f;
+					text-decoration:underline;
+					background-color:#f3e9e8;
+					cursor:	text;
+					}
+
+		
+	/* 	content
+	  	---------------------------------------- */	
+	#content {
+		width: 960px;
+		margin:0 auto;
+		padding:55px 0 110px;
+		}		
+		
+		/* 	root-banner
+		  	---------------------------------------- */	
+		#content .root-banner{
+			margin-top:-20px;
+			height:431px;
+			position:relative;
+			background:url("../i/bg/lego-house.png") no-repeat center 83px;
+			}
+		
+			/* 	left-product
+			  	---------------------------------------- */	
+			#content .root-banner .left-product{
+				top:0;
+				left:10px;
+				position:absolute;
+				}
+				#content .root-banner .left-product li{
+					margin:2px 0 0 0;
+					text-align:left;
+					list-style:none;
+					height:141px;
+					}
+					#content .root-banner .left-product li img{
+						width:188px;
+						height:141px;
+						float:left;
+						clear:both;
+						}
+						
+					#content .root-banner .left-product li a{
+						float:left;
+						margin:55px 0 0 5px;
+						font-size:18px;
+						color:#0072bc;
+						}
+					#content .root-banner .left-product li a:hover{
+						color:#448ccb;
+						text-decoration:none;
+						}
+			
+			/* 	right-product
+			  	---------------------------------------- */	
+			#content .root-banner .right-product{
+				top:0;
+				right:15px;
+				position:absolute;
+				}
+				#content .root-banner .right-product li{
+					margin:2px 0 0 0;
+					text-align:right;
+					list-style:none;
+					height:141px;
+					}
+					#content .root-banner .right-product li img{
+						width:188px;
+						height:141px;
+						float:right;
+						clear:both;
+						}
+						#content .root-banner .right-product li img.facades{
+							margin-top:-15px;
+							}
+							
+					#content .root-banner .right-product li a{
+						float:right;
+						margin:55px 5px 0 0;
+						font-size:18px;
+						color:#0072bc;
+						}
+					#content .root-banner .right-product li a:hover{
+						color:#448ccb;
+						text-decoration:none;
+						}
+
+		/* 	services
+		  	---------------------------------------- */	
+		#content .services{
+			height:110px;
+			margin:20px 0 35px 0;
+			}
+			#content .services h2{
+				margin:0 0 0 -40px;
+				padding:10px 0 5px 40px;
+				}
+			#content .services h2 a{
+				display:block;
+				font: 18px Arial;
+				color:#0072bc;
+				}
+				#content .services h2 a:hover{
+					color:#448ccb;
+					text-decoration:none;
+					}
+					#content .services .feature-1{
+						background:url("../i/bg/feature-1.png") no-repeat left top;
+						}
+					#content .services .feature-2{
+						background:url("../i/bg/feature-2.png") no-repeat left top;
+						}
+					#content .services .feature-3{
+						background:url("../i/bg/feature-3.png") no-repeat left top;
+						}
+					
+
+
+			
+			
+		/* 	index-2
+	  		--------------
+			#content
+			-------------- */	
+			
+			
+	/* 	sidebar-l
+	  	---------------------------------------- */		
+		#content .sidebar-l{
+			}
+			
+		/* 	nav-left
+		  	---------------------------------------- */		
+
+				#content .sidebar-l .nav-left li{
+					list-style:none;
+					}
+				#content .sidebar-l .nav-left li ul{
+					display:block;
+					margin:0 0 0 40px;
+					}
+					#content .sidebar-l .nav-left li a{
+						color:#ff5d4f;
+						padding:2px 5px 18px 5px;
+						font-size:14px;
+						display:block;
+						background-color:#fff;
+						}
+					#content .sidebar-l .nav-left li a:hover{
+						color:#fe9f9f;
+						text-decoration:none;
+						}
+						#content .sidebar-l .nav-left li.link-active{
+							margin:2px 0 18px 0;
+							}
+						#content .sidebar-l .nav-left li.link-active a{
+							color:#ff5d4f;
+							text-decoration:none;
+							background-color:#f3e9e8;
+							padding:2px 5px;
+							display:inline;
+							cursor:	text;
+							}
+
+			
+		/* 	sidebar-r
+	  		---------------------------------------- */	
+		#content .sidebar-r{
+			}
+			
+			/* 	condition
+		  		---------------------------------------- */	
+			#content .sidebar-r .condition{
+				padding:42px 0 0 0;
+				width:230px;
+				font-size:14px;
+				}
+				#content .sidebar-r .condition dt{
+					width:200px;
+					}
+				#content .sidebar-r .condition dd{
+					margin:24px 0 0 34px;
+					}
+				#content .sidebar-r .condition dd i{
+					font-style:normal;
+					padding:0 0 0 15px;
+					display:block;
+					}
+				
+	
+		/* 	main
+	  		---------------------------------------- */	
+		#content .main{
+			}	
+			
+			/* 	details
+		  		---------------------------------------- */	
+			#content .main .details{
+				margin:-3px 0 0 0;
+				}
+				#content .main .details h2{
+					color:black;
+					}
+				#content .main .details p{
+					font-size:14px;
+					color:#6c6c6c;
+					}
+				#content .main .details p a{
+					font-size:14px;
+					color:#0072bc;
+					}
+					#content .main .details p a:hover{
+						color:#448ccb;
+						text-decoration:none;
+						}
+		
+		
+		
+		
+		
+		
+		
+	/*	footer
+	   	---------------------------------------- */	
+	#footer {
+		width: 100%;
+		position: absolute;
+	  	bottom: 0;
+		}
+		#footer .inner-futer{
+			width:960px;
+			margin:0 auto;
+			}
+	
+		/*	hr
+		   	---------------------------------------- */	
+		#footer .hr{
+			height: 8px;
+			border-bottom:3px solid #ff5d4f;
+			background:url("../i/bg/roof.png") no-repeat right 0;
+			margin-bottom:20px;
+			}
+			
+		/*	right
+		   	---------------------------------------- */	
+			#footer .inner-futer .right{
+				text-align:right;
+				list-style:none;
+				}
+				#footer .inner-futer .right a{
+					line-height:18px;
+					}
+				#footer .inner-futer .right a:hover{
+						color:#fe9f9f;
+						text-decoration:none;
+						}
+						
+			#footer .inner-futer .left{
+				color:#8a8a8a;
+				}	
